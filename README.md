@@ -33,3 +33,5 @@ The private repo link in the status check is only visible to collaborators who h
 | `E2E_APP_PRIVATE_KEY` | GitHub App private key (PEM, generated in App settings) |
 
 > Both secrets must also be set on `gha-ci-check-e2e`.
+
+<!-- trigger test PR -->
