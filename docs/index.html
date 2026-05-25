@@ -34,139 +34,97 @@
       margin-bottom: 1.8rem;
     }
     .logo svg { fill: #e6edf3; }
-    .logo span {
-      font-size: 0.85rem;
-      color: #8b949e;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
+    .logo span { font-size: 0.85rem; color: #8b949e; font-weight: 500; letter-spacing: 0.02em; }
 
-    h1 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #e6edf3;
-    }
+    h1 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: #e6edf3; }
 
-    .subtitle {
-      font-size: 0.9rem;
-      color: #8b949e;
-      line-height: 1.55;
-      margin-bottom: 2rem;
-    }
+    .subtitle { font-size: 0.9rem; color: #8b949e; line-height: 1.55; margin-bottom: 2rem; }
     .subtitle a { color: #58a6ff; text-decoration: none; }
     .subtitle a:hover { text-decoration: underline; }
 
     .section-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #8b949e;
-      margin-bottom: 0.75rem;
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; color: #8b949e; margin-bottom: 0.75rem;
     }
 
     /* Target selector */
-    .target-group {
-      display: flex;
-      gap: 0.75rem;
-      margin-bottom: 1.25rem;
-    }
+    .target-group { display: flex; gap: 0.75rem; margin-bottom: 1.25rem; }
     .target-option {
-      flex: 1;
-      border: 1px solid #30363d;
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      cursor: pointer;
+      flex: 1; border: 1px solid #30363d; border-radius: 8px;
+      padding: 0.75rem 1rem; cursor: pointer;
       transition: border-color 0.15s, background 0.15s;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      display: flex; align-items: center; gap: 0.6rem;
     }
     .target-option:hover { border-color: #58a6ff; }
     .target-option.selected { border-color: #388bfd; background: #1c2b3a; }
     .target-option input[type="radio"] { accent-color: #388bfd; }
     .target-option .label { font-size: 0.88rem; font-weight: 500; }
 
-    /* Org name input */
+    /* Text input */
     .field { margin-bottom: 1.5rem; }
-    .field label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-      color: #c9d1d9;
-    }
+    .field label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; color: #c9d1d9; }
     .field input[type="text"] {
-      width: 100%;
-      background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      color: #e6edf3;
-      font-size: 0.9rem;
-      padding: 0.5rem 0.75rem;
-      outline: none;
+      width: 100%; background: #0d1117; border: 1px solid #30363d; border-radius: 6px;
+      color: #e6edf3; font-size: 0.9rem; padding: 0.5rem 0.75rem; outline: none;
       transition: border-color 0.15s;
     }
     .field input[type="text"]:focus { border-color: #388bfd; }
 
     /* Permissions table */
-    .perms {
-      border: 1px solid #21262d;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 1.75rem;
-      font-size: 0.85rem;
-    }
-    .perms-row {
-      display: flex;
-      align-items: center;
-      padding: 0.55rem 0.9rem;
-      border-bottom: 1px solid #21262d;
-    }
+    .perms { border: 1px solid #21262d; border-radius: 8px; overflow: hidden; margin-bottom: 1.75rem; font-size: 0.85rem; }
+    .perms-row { display: flex; align-items: center; padding: 0.55rem 0.9rem; border-bottom: 1px solid #21262d; }
     .perms-row:last-child { border-bottom: none; }
     .perms-row:nth-child(even) { background: #0d1117; }
     .perm-name { flex: 1; color: #c9d1d9; }
-    .perm-level {
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.15rem 0.5rem;
-      border-radius: 20px;
-      letter-spacing: 0.02em;
-    }
-    .level-rw  { background: #1a2f1a; color: #3fb950; border: 1px solid #2ea043; }
-    .level-ro  { background: #1c2128; color: #8b949e; border: 1px solid #30363d; }
+    .perm-level { font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 20px; letter-spacing: 0.02em; }
+    .level-rw { background: #1a2f1a; color: #3fb950; border: 1px solid #2ea043; }
+    .level-ro { background: #1c2128; color: #8b949e; border: 1px solid #30363d; }
 
-    /* CTA button */
+    /* Button */
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      width: 100%;
-      padding: 0.7rem 1rem;
-      background: #238636;
-      border: 1px solid #2ea043;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-      text-decoration: none;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      width: 100%; padding: 0.7rem 1rem; background: #238636; border: 1px solid #2ea043;
+      border-radius: 8px; color: #fff; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      transition: background 0.15s, border-color 0.15s; text-decoration: none;
     }
     .btn:hover { background: #2ea043; border-color: #3fb950; }
     .btn svg { fill: #fff; flex-shrink: 0; }
 
-    .footer-note {
-      margin-top: 1.25rem;
-      font-size: 0.78rem;
-      color: #6e7681;
-      text-align: center;
-      line-height: 1.5;
-    }
+    .footer-note { margin-top: 1.25rem; font-size: 0.78rem; color: #6e7681; text-align: center; line-height: 1.5; }
     .footer-note a { color: #58a6ff; text-decoration: none; }
     .footer-note a:hover { text-decoration: underline; }
+
+    /* ── Success state ────────────────────────────────────────────────── */
+    .success-banner {
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      background: #1a2f1a; border: 1px solid #2ea043; border-radius: 8px;
+      padding: 1rem 1.1rem; margin-bottom: 1.75rem;
+    }
+    .success-banner .icon { font-size: 1.3rem; line-height: 1; flex-shrink: 0; margin-top: 0.05rem; }
+    .success-banner .body { font-size: 0.88rem; line-height: 1.6; color: #c9d1d9; }
+    .success-banner .body strong { color: #3fb950; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+    .steps { counter-reset: step; margin-bottom: 1.75rem; }
+    .step {
+      display: flex; gap: 0.85rem; padding: 0.75rem 0;
+      border-bottom: 1px solid #21262d; font-size: 0.88rem; line-height: 1.55;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      counter-increment: step;
+      background: #21262d; border-radius: 50%;
+      width: 1.6rem; height: 1.6rem; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 700; color: #8b949e;
+    }
+    .step-body { color: #c9d1d9; }
+    .step-body strong { color: #e6edf3; }
+    .step-body a { color: #58a6ff; text-decoration: none; }
+    .step-body a:hover { text-decoration: underline; }
+    .step-body code {
+      background: #0d1117; border: 1px solid #30363d; border-radius: 4px;
+      padding: 0.1rem 0.4rem; font-size: 0.82rem; font-family: ui-monospace, monospace; color: #e6edf3;
+    }
 
     .hidden { display: none !important; }
   </style>
@@ -174,134 +132,200 @@
 <body>
   <div class="card">
 
-    <!-- Logo row -->
+    <!-- Logo -->
     <div class="logo">
       <svg height="24" width="24" viewBox="0 0 16 16">
         <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38
-                 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48
-                 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12
-                 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27
-                 -1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12
-                 -.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95
-                 -.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66
-                 -.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13
-                 .16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49
-                 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
+                 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95
+                 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82
+                 -.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82
+                 -.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95
+                 -.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82
+                 -.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94
+                 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
       </svg>
       <span>ArlonResearch / gha-ci-check</span>
     </div>
 
-    <h1>Create the E2E Bridge App</h1>
-    <p class="subtitle">
-      This creates a GitHub App pre-configured with the exact permissions needed
-      for the <a href="https://github.com/ArlonResearch/gha-ci-check">cross-repo E2E dispatch pattern</a> —
-      public repo triggers private suite, private suite posts commit status back.
-    </p>
+    <!-- ── CREATE state ──────────────────────────────────────────────── -->
+    <div id="state-create">
+      <h1>Create the E2E Bridge App</h1>
+      <p class="subtitle">
+        Creates a GitHub App pre-configured with the exact permissions needed for the
+        <a href="https://github.com/ArlonResearch/gha-ci-check">cross-repo E2E dispatch pattern</a> —
+        public repo triggers a private test suite; private suite posts the commit status back.
+      </p>
 
-    <!-- Target selector -->
-    <p class="section-label">Create app in</p>
-    <div class="target-group">
-      <label class="target-option" id="opt-org">
-        <input type="radio" name="target" value="org" checked />
-        <span class="label">Organization</span>
-      </label>
-      <label class="target-option" id="opt-personal">
-        <input type="radio" name="target" value="personal" />
-        <span class="label">Personal account</span>
-      </label>
+      <p class="section-label">Create app in</p>
+      <div class="target-group">
+        <label class="target-option selected" id="opt-org">
+          <input type="radio" name="target" value="org" checked />
+          <span class="label">Organization</span>
+        </label>
+        <label class="target-option" id="opt-personal">
+          <input type="radio" name="target" value="personal" />
+          <span class="label">Personal account</span>
+        </label>
+      </div>
+
+      <div class="field" id="org-field">
+        <label for="org-name">Organization name</label>
+        <input type="text" id="org-name" value="ArlonResearch" placeholder="your-org" autocomplete="off" />
+      </div>
+
+      <p class="section-label">App permissions that will be set</p>
+      <div class="perms">
+        <div class="perms-row">
+          <span class="perm-name">Commit statuses</span>
+          <span class="perm-level level-rw">Read &amp; write</span>
+        </div>
+        <div class="perms-row">
+          <span class="perm-name">Contents</span>
+          <span class="perm-level level-rw">Read &amp; write</span>
+        </div>
+        <div class="perms-row">
+          <span class="perm-name">Metadata</span>
+          <span class="perm-level level-ro">Read-only</span>
+        </div>
+      </div>
+
+      <form id="app-form" method="post">
+        <input type="hidden" name="manifest" id="manifest-input" />
+        <button type="submit" class="btn">
+          <svg height="16" width="16" viewBox="0 0 16 16">
+            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38
+                     0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95
+                     0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82
+                     -.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82
+                     -.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95
+                     -.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82
+                     -.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94
+                     0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
+          </svg>
+          Create GitHub App on GitHub →
+        </button>
+      </form>
+
+      <p class="footer-note">
+        You'll confirm on GitHub, then be sent back here with next steps.<br/>
+        Prefer doing it manually?
+        <a href="https://github.com/ArlonResearch/gha-ci-check/blob/main/docs/github-app.md">Full setup guide →</a>
+      </p>
     </div>
 
-    <!-- Org name -->
-    <div class="field" id="org-field">
-      <label for="org-name">Organization name</label>
-      <input type="text" id="org-name" value="ArlonResearch" placeholder="your-org" autocomplete="off" />
+    <!-- ── SUCCESS state (shown after GitHub redirects back with ?code=) ── -->
+    <div id="state-success" class="hidden">
+      <h1>App created 🎉</h1>
+      <p class="subtitle" style="margin-bottom:1.5rem;">
+        The <strong>arlon-e2e-bridge</strong> GitHub App has been registered with the correct
+        permissions. Complete the three steps below to finish the setup.
+      </p>
+
+      <div class="success-banner">
+        <span class="icon">✅</span>
+        <div class="body">
+          <strong>Permissions configured automatically</strong>
+          Commit statuses (R/W) · Contents (R/W) · Metadata (read-only) · Webhooks disabled
+        </div>
+      </div>
+
+      <p class="section-label">Next steps</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Get the App ID</strong><br/>
+            Go to your new App's settings page (GitHub just sent you there).
+            The <strong>App ID</strong> is the number at the very top of the page.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Generate a private key</strong><br/>
+            Scroll to the bottom of the App settings page →
+            <strong>Private keys</strong> → <strong>Generate a private key</strong>.
+            A <code>.pem</code> file will download automatically.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Install the App &amp; add secrets</strong><br/>
+            See the
+            <a href="https://github.com/ArlonResearch/gha-ci-check/blob/main/docs/github-app.md#installing-the-app">
+              setup guide
+            </a>
+            for the install steps and the exact <code>gh secret set</code> commands
+            for both repos.
+          </div>
+        </div>
+      </div>
+
+      <a href="https://github.com/ArlonResearch/gha-ci-check/blob/main/docs/github-app.md" class="btn">
+        Open full setup guide →
+      </a>
     </div>
-
-    <!-- Permissions summary -->
-    <p class="section-label">App permissions</p>
-    <div class="perms">
-      <div class="perms-row">
-        <span class="perm-name">Commit statuses</span>
-        <span class="perm-level level-rw">Read &amp; write</span>
-      </div>
-      <div class="perms-row">
-        <span class="perm-name">Contents</span>
-        <span class="perm-level level-rw">Read &amp; write</span>
-      </div>
-      <div class="perms-row">
-        <span class="perm-name">Metadata</span>
-        <span class="perm-level level-ro">Read-only</span>
-      </div>
-    </div>
-
-    <!-- Submit form -->
-    <form id="app-form" method="post">
-      <input type="hidden" name="manifest" id="manifest-input" />
-      <button type="submit" class="btn">
-        <svg height="16" width="16" viewBox="0 0 16 16">
-          <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38
-                   0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48
-                   1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12
-                   0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27
-                   -1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12
-                   -.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95
-                   -.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66
-                   -.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13
-                   .16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49
-                   0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
-        </svg>
-        Create GitHub App on GitHub →
-      </button>
-    </form>
-
-    <p class="footer-note">
-      You'll be taken to GitHub to confirm. After creation, generate a private key and
-      <a href="https://github.com/ArlonResearch/gha-ci-check/blob/main/docs/github-app.md">follow the setup guide</a>
-      to install the app and add secrets to your repos.
-    </p>
 
   </div>
 
   <script>
+    // ── Manifest (no hook_attributes — omitting it disables webhooks entirely) ──
+    const BASE_URL    = "https://arlonresearch.github.io/gha-ci-check/";
+    const REDIRECT    = BASE_URL + "?created=1";
+
     const manifest = {
-      name: "arlon-e2e-bridge",
-      url: "https://github.com/ArlonResearch/gha-ci-check",
-      description: "Triggers private E2E suites from public repos and posts commit statuses back. Part of the ArlonResearch cross-repo CI pattern.",
-      hook_attributes: { active: false },
+      name:         "arlon-e2e-bridge",
+      url:          "https://github.com/ArlonResearch/gha-ci-check",
+      redirect_url: REDIRECT,
+      description:  "Triggers private E2E suites from public repos and posts commit statuses back. Part of the ArlonResearch cross-repo CI pattern.",
       default_permissions: {
-        statuses:  "write",
-        contents:  "write",
-        metadata:  "read"
+        statuses: "write",
+        contents: "write",
+        metadata: "read"
       },
       default_events: [],
       public: false
     };
 
-    const form      = document.getElementById("app-form");
-    const orgField  = document.getElementById("org-field");
-    const orgInput  = document.getElementById("org-name");
-    const optOrg    = document.getElementById("opt-org");
-    const optPers   = document.getElementById("opt-personal");
+    // ── Show success state if GitHub redirected back after creation ──────────
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("created") || params.has("code")) {
+      document.getElementById("state-create").classList.add("hidden");
+      document.getElementById("state-success").classList.remove("hidden");
+    }
+
+    // ── Create-form logic ────────────────────────────────────────────────────
+    const form     = document.getElementById("app-form");
+    const orgField = document.getElementById("org-field");
+    const orgInput = document.getElementById("org-name");
+    const optOrg   = document.getElementById("opt-org");
+    const optPers  = document.getElementById("opt-personal");
 
     function update() {
-      const isOrg  = document.querySelector('input[name="target"]:checked').value === "org";
-      const org    = orgInput.value.trim();
+      const isOrg = document.querySelector('input[name="target"]:checked').value === "org";
+      const org   = orgInput.value.trim();
 
       optOrg.classList.toggle("selected",  isOrg);
       optPers.classList.toggle("selected", !isOrg);
       orgField.classList.toggle("hidden",  !isOrg);
 
-      form.action = isOrg && org
+      form.action = (isOrg && org)
         ? `https://github.com/organizations/${encodeURIComponent(org)}/settings/apps/new`
         : "https://github.com/settings/apps/new";
 
+      // Always write the manifest right before submission too (see submit listener)
       document.getElementById("manifest-input").value = JSON.stringify(manifest);
     }
 
     document.querySelectorAll('input[name="target"]').forEach(r => r.addEventListener("change", update));
     orgInput.addEventListener("input", update);
-    form.addEventListener("submit", update);   // re-run just before POST
-    update();
+    // Ensure the hidden field is populated at the exact moment of submission
+    form.addEventListener("submit", () => {
+      document.getElementById("manifest-input").value = JSON.stringify(manifest);
+    });
+
+    update(); // initialise on page load
   </script>
 </body>
 </html>
