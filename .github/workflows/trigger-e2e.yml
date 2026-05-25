@@ -1,0 +1,67 @@
+name: Trigger E2E Tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  trigger-e2e:
+    name: Dispatch E2E to Private Suite
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write   # needed to post the initial pending status via GITHUB_TOKEN
+                        # (the app token handles the cross-repo write back)
+    steps:
+      # ── 1. Generate a short-lived token from the GitHub App ──────────────
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.E2E_APP_ID }}
+          private-key: ${{ secrets.E2E_APP_PRIVATE_KEY }}
+          # Grant access to both this repo AND the private E2E repo
+          repositories: "gha-ci-check,gha-ci-check-e2e"
+
+      # ── 2. Immediately set a pending commit status so the PR shows a check ─
+      - name: Set pending commit status
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              sha:   context.sha,
+              state: 'pending',
+              context:     'E2E Tests / Private Suite',
+              description: 'Waiting for private E2E suite to start…',
+            });
+            core.info(`Pending status set on ${context.sha}`);
+
+      # ── 3. Fire the repository_dispatch to the private E2E repo ────────────
+      - name: Dispatch to gha-ci-check-e2e
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
+            const payload = {
+              sha:          context.sha,
+              ref:          context.ref,
+              source_owner: context.repo.owner,
+              source_repo:  context.repo.repo,
+              // Pass the PR number when available so the private side can annotate it
+              pr_number:    context.payload.pull_request?.number?.toString() ?? '',
+              run_id:       context.runId.toString(),
+            };
+
+            await github.rest.repos.createDispatchEvent({
+              owner:      context.repo.owner,
+              repo:       'gha-ci-check-e2e',
+              event_type: 'run-e2e',
+              client_payload: payload,
+            });
+
+            core.info(`Dispatched run-e2e event to gha-ci-check-e2e`);
+            core.info(`Payload: ${JSON.stringify(payload, null, 2)}`);
