@@ -30,15 +30,19 @@ jobs:
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
+            // For pull_request events use the real branch-head SHA, not the
+            // virtual merge commit that context.sha resolves to.
+            const sha = context.payload.pull_request?.head?.sha ?? context.sha;
+
             await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo:  context.repo.repo,
-              sha:   context.sha,
+              sha,
               state: 'pending',
               context:     'E2E Tests / Private Suite',
               description: 'Waiting for private E2E suite to start…',
             });
-            core.info(`Pending status set on ${context.sha}`);
+            core.info(`Pending status set on ${sha}`);
 
       # ── 3. Fire the repository_dispatch to the private E2E repo ────────────
       - name: Dispatch to gha-ci-check-e2e
@@ -46,8 +50,11 @@ jobs:
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
+            // Same fix: use the real head SHA for pull_request events.
+            const sha = context.payload.pull_request?.head?.sha ?? context.sha;
+
             const payload = {
-              sha:          context.sha,
+              sha,
               ref:          context.ref,
               source_owner: context.repo.owner,
               source_repo:  context.repo.repo,
@@ -63,5 +70,5 @@ jobs:
               client_payload: payload,
             });
 
-            core.info(`Dispatched run-e2e event to gha-ci-check-e2e`);
+            core.info(`Dispatched run-e2e event to gha-ci-check-e2e (sha: ${sha})`);
             core.info(`Payload: ${JSON.stringify(payload, null, 2)}`);
